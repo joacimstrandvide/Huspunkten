@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Här hittar ni ert drömhus" />
+    <title>Huspunkten</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="brand-title">HUSPUNKTEN</div>
+      <!--Hamburger meny-->
+      <!--Mobile-->
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <!--Navbar desktop-->
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Hem</a></li>
+          <li><a href="contact-form">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Validated-->
+
+    <!--Hero Section-->
+    <section class="hero-image">
+      <div class="hero-text">
+        <h1>DIN DRÖM</h1>
+        <h1>VÅRT UPDRAG</h1>
+        <h2 id="usp-text">
+          Vilket är ert drömhus?<br />
+          en ny bostad i villakvarteret, ett fjällhus mitt i skidbacken, ett
+          sommarhus i skärgården eller kanske ett attefallshus för uthyrning?
+        </h2>
+
+        <button class="btn" onclick="window.location.href='https://www.ithse.se';">
+          Läs Mer
+        </button>
+      </div>
+    </section>
+
+    <!-- Testimonials, grid area -->
+    <section class="testimonials-grid">
+      <grid id="comment1"></grid>
+      <grid id="comment2">
+        <h2>En husleverantör med stark framtidsvision!</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          illum perferendis aliquam.<br />
+          Et commodi numquam praesentium aspernatur magni quam veniam. Expedita
+          rerum natus sunt temporibus, <br />aliquam culpa quasi qui! Sequi quod
+          consequatur quasi amet mollitia dolorum <br />expedita itaque, facilis
+          accusantium quae officia voluptatum impedit harum dolor. Iusto tempora
+          ut quis.
+        </p>
+      </grid>
+      <grid id="comment3">
+        <h2>En husleverantör med stark framtidsvision!</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          illum perferendis aliquam.<br />
+          Et commodi numquam praesentium aspernatur magni quam veniam. Expedita
+          rerum natus sunt temporibus, <br />aliquam culpa quasi qui! Sequi quod
+          consequatur quasi amet mollitia dolorum <br />expedita itaque, facilis
+          accusantium quae officia voluptatum impedit harum dolor. Iusto tempora
+          ut quis.
+        </p>
+        <button class="btn2" onclick="window.location.href='#'">
+          Läs Mer
+        </button>
+      </grid>
+      <grid id="comment4"></grid>
+    </section>
+    <!--Slideshow-->
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/hus1_1800x1057.jpg" alt="hus1">
+                <h1 class="mySlides-header">Fritidshus 60-90kvm</h1>
+                <p class="mySlides-text"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

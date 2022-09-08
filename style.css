@@ -1,0 +1,310 @@
+/*Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+/*Contents
+1. Root settings
+2. Body, html settings
+3. Buttons
+4. Navbar
+5. Hero Section
+6. Testimonials
+
+*/
+
+/* 1. Root settings */
+* {
+  font-family: roboto;
+  box-sizing: border-box;
+  --one: #020202;
+  --two: #0596a6;
+  --three: #03a6a6;
+  --four: #222d38;
+  --five: #dad3c8;
+  --black: black;
+  --six: #726651;
+  --white: #ffffff;
+}
+/* Validated */
+
+/* 2. body, html settings */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: var(--five);
+}
+/* Validated */
+
+/* 3. Buttons */
+/*Button 1*/
+
+.btn {
+  border: none;
+  background-color: var(--six);
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+}
+/* Validated */
+
+/*Button 2*/
+
+.btn2 {
+  border: none;
+  background-color: var(--black);
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  margin-top: 2vh;
+}
+/* Validated */
+
+/* 4. Navbar */
+/* Navbar with flex method */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--four);
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* Logo / title settings */
+.brand-title {
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: bold;
+  margin-left: 2vh;
+}
+
+.navbar-links {
+  height: 100%;
+  background-color: var(--four);
+}
+
+.navbar-links ul {
+  display: flex;
+  padding: 0;
+  margin-top: 3vh;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 1rem;
+  margin: 2vh;
+}
+
+.navbar-links li:hover {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+/* Handled by javascript */
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+/* Bar style */
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10%;
+}
+
+/* Media queries */
+@media screen and (max-width: 400px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.05rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .brand-title {
+    margin-top: 2vw;
+  }
+}
+/* Validated */
+
+/* 5. Hero Section */
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/hus1_1800x1057.jpg);
+  height: 120vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero-image .btn {
+  margin-top: 5vw;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 550px) {
+  .hero-image {
+    height: 140vh;
+  }
+}
+
+/* Validated */
+
+/* 6. Testimonials - grid area */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  row-gap: 10vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  height: 90vh;
+  grid-template-areas:
+    "comment1 comment1 comment2 comment2"
+    "comment3 comment3 comment4 comment4";
+}
+
+/* Grid comments */
+#comment1 {
+  grid-area: comment1;
+  border-radius: 8px;
+  background-image: url(img/family-3602245_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#comment2 {
+  grid-area: comment2;
+  background-color: var(--two);
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: var(--white);
+}
+
+#comment2 h2 {
+  margin-top: 10vh;
+}
+
+#comment3 {
+  grid-area: comment3;
+  background-color: var(--two);
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: var(--white);
+}
+
+#comment3 h2 {
+  margin-top: 10vh;
+}
+
+#comment4 {
+  grid-area: comment4;
+  border-radius: 8px;
+  background-image: url(img/office-820390_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Media Queries */
+@media screen and (max-width: 550px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    row-gap: 5vh;
+    grid-template-areas:
+      "comment1"
+      "comment2"
+      "comment4"
+      "comment3";
+  }
+
+  #comment1,
+  #comment2,
+  #comment3,
+  #comment4 {
+    height: 70vh;
+    padding: 20px;
+  }
+}
