@@ -2,12 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
 
 /*Contents
+
 1. Root settings
-2. Body, html settings
+2. Body, Html settings
 3. Buttons
 4. Navbar
 5. Hero Section
 6. Testimonials
+7. Slideshow
+8. Info Section
+9. Choose Section
+10. Form
+11. Footer
 
 */
 
@@ -306,5 +312,395 @@ html {
   #comment4 {
     height: 70vh;
     padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #comment2 p,
+  #comment3 p {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/*7. Slideshow*/
+
+.slideshow-container {
+  width: 80%;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+  background-color: #ffffff;
+  height: 90vh;
+  border-radius: 10px;
+}
+
+/*Adjusting image*/
+.slideshow-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 50px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides h1,
+p {
+  margin-top: -2vh;
+  text-align: center;
+}
+
+.mySlides .mySlides-header {
+  font-size: 2rem;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slideshow Responsive settings*/
+@media only screen and (max-width: 750px) {
+  .slideshow-container {
+    height: 70vh;
+  }
+  .slideshow-container img {
+    width: 99%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .slideshow-container {
+    height: 50vh;
+  }
+  .slideshow-container img {
+    width: 99%;
+  }
+}
+
+/* 8. Section Info Grid*/
+
+.info-grid-container {
+  display: grid;
+  /*First we declare the columns*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*Next we declare the rows*/
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  row-gap: 5vh;
+  margin-top: 5vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  height: auto;
+  grid-template-areas:
+    "info1 info1 info2 info2"
+    "info3 info3 info4 info4";
+}
+
+#info1 {
+  grid-area: info1;
+  border-radius: 8px;
+  background-image: url(/img/jonas-leupe-wlrmQa7Hli8-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#info2 {
+  background-color: var(--two);
+  grid-area: info2;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: white;
+}
+
+#info2 p,
+h2 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4vh;
+}
+
+#info3 {
+  background-color: var(--three);
+  grid-area: info3;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: white;
+}
+
+#info3 p,
+h2 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4vh;
+}
+
+#info4 {
+  grid-area: info4;
+  border-radius: 8px;
+  background-image: url(/img/christin-hume-mfB1B1s4sMc-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.download {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+
+.google {
+  width: 15vw;
+  height: 8vh;
+  background-image: url(/img/google.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.ios {
+  width: 15vw;
+  background-image: url(/img/ios.png);
+  height: 8vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/*Section Testimonials Grid Responsive settings*/
+@media only screen and (max-width: 550px) {
+  .info-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    row-gap: 5vh;
+    grid-template-areas:
+      "info1"
+      "info2"
+      "info4"
+      "info3";
+  }
+  #info4 {
+    height: 50vh;
+  }
+
+  #info2 {
+    height: auto;
+  }
+  #info3 {
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #info2 p,
+  #info3 p {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* 9. Section choose grid*/
+
+.choose-grid-container {
+  display: grid;
+  /*First we declare the columns*/
+  grid-template-columns: 1fr 1fr 1fr;
+  /*Next we declare the rows*/
+  grid-template-rows: 1fr;
+  gap: 20px;
+  row-gap: 5vh;
+  margin-top: 20vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  height: auto;
+  grid-template-areas: "choose1 choose2 choose3";
+}
+
+#choose1 {
+  background-color: var(--white);
+  grid-area: choose1;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: black;
+  text-transform: uppercase;
+}
+
+#choose2 {
+  background-color: var(--white);
+  grid-area: choose2;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: black;
+  text-transform: uppercase;
+}
+
+#choose3 {
+  background-color: var(--white);
+  grid-area: choose3;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.choose-title {
+  font-size: 2rem;
+}
+
+.choose-text {
+  display: flex;
+  width: 80%;
+  margin-top: 2vh;
+  justify-content: center;
+  margin: auto;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 2vh;
+}
+
+
+@media only screen and (max-width: 550px) {
+  .choose-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    row-gap: 5vh;
+    grid-template-areas:
+      "choose1"
+      "choose2"
+      "choose3";
+  }
+}
+
+/*10. Section Form*/
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* 11. Section Footer*/
+
+.Grid__Container {
+  display: grid;
+  margin-top: 40vh;
+  grid-template-columns: repeat(2, 1fr);
+  height: 40vh;
+  background-color: var(--four);
+}
+
+#item1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+
+#item2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+
+#item3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+
+#item4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+
+.Bottom_Column {
+  grid-column: span 2 / span 2;
+  background-color: var(--four);
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+@media (min-width: 768px) {
+  .Grid__Container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Bottom_Column {
+    grid-column: span 4;
   }
 }
