@@ -1,7 +1,7 @@
 
 # Huspunkten
 
-A website for a company developing housing.
+En webbsida för ett företag som bygger hus
 
 
 
