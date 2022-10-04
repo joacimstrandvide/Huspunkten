@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Här hittar ni ert drömhus" />
+    <!--SEO-->
+    <meta name="description" content="Här finner ni ert drömhus" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="app.js" defer></script>
     <title>Huspunkten</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--Navbar-->
     <nav class="navbar">
       <div class="brand-title">HUSPUNKTEN</div>
-      <!--Hamburger meny-->
-      <!--Mobile-->
+      <!--Mobile menu-->
       <a href="#" class="toggle-button">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </a>
-      <!--Navbar desktop-->
+      <!--Navbar in desktop mode-->
       <div class="navbar-links">
         <ul>
           <li><a href="#">Hem</a></li>
@@ -27,66 +28,67 @@
         </ul>
       </div>
     </nav>
-    <!--Validated-->
 
     <!--Hero Section-->
     <section class="hero-image">
       <div class="hero-text">
-        <h1>DIN DRÖM</h1>
-        <h1>VÅRT UPDRAG</h1>
+        <h1>DIN DRÖM.</h1>
+        <h1>VÅRT UPPDRAG.</h1>
         <h2 id="usp-text">
           Vilket är ert drömhus?<br />
-          en ny bostad i villakvarteret, ett fjällhus mitt i skidbacken, ett
-          sommarhus i skärgården eller kanske ett attefallshus för uthyrning?
+          En ny bostad i villakvarteret, ett fjällhus mitt i skidbacken, ett
+          sommarhus i skärgården eller kanske ett Attefallshus för uthyrning?
         </h2>
 
-        <button
-          class="btn"
-          onclick="window.location.href='https://www.ithse.se';"
-        >
-          Läs Mer
-        </button>
+        <button class="btn" onclick="window.location.href='#'">Läs mer</button>
       </div>
     </section>
-    <!--Validated-->
+    <!--Testimonial Section, Grid Area-->
+    <section class="testimonials-grid-container">
+      <!--Grid Area-->
 
-    <!-- Testimonials, grid area -->
-    <section class="testimonials-grid">
-      <grid id="comment1"></grid>
-      <grid id="comment2">
+      <div id="comment1"></div>
+      <div id="comment2">
         <h2>En husleverantör med stark framtidsvision!</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          illum perferendis aliquam.<br />
-          Et commodi numquam praesentium aspernatur magni quam veniam. Expedita
-          rerum natus sunt temporibus, <br />aliquam culpa quasi qui! Sequi quod
-          consequatur quasi amet mollitia dolorum <br />expedita itaque, facilis
-          accusantium quae officia voluptatum impedit harum dolor. Iusto tempora
-          ut quis.
+          Vilket är ert drömhus? En ny bostad i villakvarteret, ett fjällhus
+          mitt i skidbacken, ett sommarhus i skärgården eller kanske ett
+          Attefallshus för uthyrning?<br />
+          <br />
+          Huspunkten är en helhetsleverantör av hus i alla dess former. Vår
+          vision är att vara det självklara valet som tar husbranschen till
+          nästa nivå!<br />
+          <br />
+          Vi vill kunna inspirera dig och visualisera dina husdrömmar med hjälp
+          av den senaste tekniken. Vår målsättning är att underlätta hela
+          byggprocessen och skapa en trygghet gällande kostnader och ett
+          totalansvar för ert kommande byggprojekt
         </p>
-      </grid>
-      <grid id="comment3">
-        <h2>En husleverantör med stark framtidsvision!</h2>
+      </div>
+
+      <div id="comment3">
+        <h2>Bygg ditt hus online och se resultatet direkt</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          illum perferendis aliquam.<br />
-          Et commodi numquam praesentium aspernatur magni quam veniam. Expedita
-          rerum natus sunt temporibus, <br />aliquam culpa quasi qui! Sequi quod
-          consequatur quasi amet mollitia dolorum <br />expedita itaque, facilis
-          accusantium quae officia voluptatum impedit harum dolor. Iusto tempora
-          ut quis.
+          Att bygga hus har aldrig varit smidigare. I vår tjänst ”bygg online”
+          med 360-konfiguration kan du skapa ditt eget drömhus med bara några
+          snabba klick.<br />
+          <br />
+          Resultatet och totalkostnaden ser du i realtid. Är du nyfiken på hur
+          huset kan se ut i olika färger eller med spröjsade fönster? Prova dig
+          fram med val av interiör och exteriör tills du har uppnått din vision.
+          Vi hjälper dig med resten.
         </p>
-        <button class="btn2" onclick="window.location.href='#'">Läs Mer</button>
-      </grid>
-      <grid id="comment4"></grid>
+        <button class="btn2" onclick="window.location.href='#';">
+          Bygg Online
+        </button>
+      </div>
+      <div id="comment4"></div>
     </section>
-    <!--Validated-->
-
     <!--Slideshow-->
     <section class="slideshow">
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <img src="img/hus1_1800x1057.jpg" alt="hus1" />
+          <img src="img/hus1.jpg" alt="hus1" />
           <h1 class="mySlides-header">Fritidshus 40-60kvm</h1>
           <p class="mySlides-text">
             Pris från: <strong>299.000:- inkl moms</strong>
@@ -110,8 +112,8 @@
         </div>
       </div>
     </section>
-    <!--Validated-->
 
+    <!--Grid Container-->
     <section class="title">
       <h1>Nästa steg</h1>
     </section>
@@ -181,7 +183,7 @@
         />
         <h1 class="choose-title">Nyckelfärdigt</h1>
         <p class="choose-text">
-          HNyckelfärdigt innebär att ditt hus är helt färdigt för inflyttning.
+          Nyckelfärdigt innebär att ditt hus är helt färdigt för inflyttning.
           För dig som inte kan, vill eller har tiden att bygga och koordinera
           ett husbygge själv!
         </p>
@@ -254,7 +256,5 @@
         <div class="Bottom_Column"><p>HUSPUNKTEN.SE</p></div>
       </div>
     </footer>
-
-    <script src="script.js" defer></script>
   </body>
 </html>
