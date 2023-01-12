@@ -1,5 +1,5 @@
 
 # Huspunkten
 
-En webbsida för ett företag som bygger hus
+Website made for a company building homes
 
